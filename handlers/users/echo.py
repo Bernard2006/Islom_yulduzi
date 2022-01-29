@@ -1,6 +1,6 @@
 from aiogram import types
 from handlers.users.start import bot_start
-from loader import dp,db
+from loader import dp
 
 
 # Echo bot
