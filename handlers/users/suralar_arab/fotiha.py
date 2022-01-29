@@ -12,6 +12,7 @@ from loader import dp
 @dp.callback_query_handler(text='sura')
 async def bot_start(request: CallbackQuery):
     await request.message.answer(text='<b>Suralar.Tanlang</b>', reply_markup=suralar_button)
+    await request.message.delete()
 
 
 @dp.message_handler(text='Fotiha')
