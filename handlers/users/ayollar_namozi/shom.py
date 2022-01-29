@@ -5,7 +5,7 @@ from keyboards.inline.ayol_shom import *
 from aiogram.types import CallbackQuery, InputFile
 
 
-@dp.message_handler(text='Shom namozi ayol')
+@dp.message_handler(text='🔹Shom namozi ayol')
 async def bot_echo(message: types.Message):
     user_id = message.from_user.id
     niyat = InputFile(path_or_bytesio='photos/ayol_niyat.jpg')
