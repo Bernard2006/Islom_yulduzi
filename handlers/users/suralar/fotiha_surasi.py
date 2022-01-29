@@ -17,7 +17,7 @@ async def bot_start(request: CallbackQuery):
 
 
 # Echo bot
-@dp.message_handler(text='Fotiha surasi')
+@dp.message_handler(text='🟢Fotiha surasi')
 async def tarjimon(message: types.Message):
     look = GetFotiha()
     audio2 = Getaudio()
