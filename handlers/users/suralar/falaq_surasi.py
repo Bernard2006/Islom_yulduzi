@@ -5,7 +5,7 @@ from handlers.users.API.falaq_audio import *
 from loader import dp
 
 
-@dp.message_handler(text='Falaq surasi')
+@dp.message_handler(text='🟢Falaq surasi')
 async def tarjimon(message: types.Message):
     look = getfalaq1()
     audio2 = getAudio1()
