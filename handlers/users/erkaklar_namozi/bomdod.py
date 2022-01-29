@@ -6,7 +6,7 @@ from keyboards.inline.erkak_bomdod import *
 from aiogram.types import CallbackQuery, InputFile
 
 
-@dp.message_handler(text='Bomdod namozi')
+@dp.message_handler(text='🔹Bomdod namozi')
 async def bot_echo(message: types.Message):
     user_id = message.from_user.id
     niyat = InputFile(path_or_bytesio='photos/niyat.png')
