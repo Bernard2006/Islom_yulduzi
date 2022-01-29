@@ -5,7 +5,7 @@ from keyboards.inline.erkak_asr import *
 from aiogram.types import CallbackQuery, InputFile
 
 
-@dp.message_handler(text='Asr namozi')
+@dp.message_handler(text='🔹Asr namozi')
 async def bot_echo(message: types.Message):
     user_id = message.from_user.id
     niyat = InputFile(path_or_bytesio='photos/niyat.png')
