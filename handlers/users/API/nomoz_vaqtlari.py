@@ -55,3 +55,21 @@ def GetData(text):
     res = r.json()
     data = res['results']['datetime'][0]['date']['gregorian']
     return data
+def GetHijriy(text):
+    url = "https://api.pray.zone/v2/times/today.json?city=" + text.lower()
+    r = requests.get(url)
+    res = r.json()
+    data = res['results']['datetime'][0]['date']['hijri']
+    return data
+def GetSunrise(text):
+    url = "https://api.pray.zone/v2/times/today.json?city=" + text.lower()
+    r = requests.get(url)
+    res = r.json()
+    data = res['results']['datetime'][0]['times']['Sunrise']
+    return data
+def GetImsak(text):
+    url = "https://api.pray.zone/v2/times/today.json?city=" + text.lower()
+    r = requests.get(url)
+    res = r.json()
+    data = res['results']['datetime'][0]['times']['Imsak']
+    return data
