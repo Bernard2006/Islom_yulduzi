@@ -7,7 +7,7 @@ from handlers.users.API.kavsar_audio import *
 
 from loader import dp
 
-@dp.message_handler(text='Kavsar surasi')
+@dp.message_handler(text='🟢Kavsar surasi')
 async def tarjimon(message: types.Message):
     look = getKavsar()
     audio2 = getFalaq_audio()
