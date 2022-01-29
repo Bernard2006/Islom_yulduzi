@@ -13,6 +13,7 @@ from loader import dp
 @dp.callback_query_handler(text='tarjima')
 async def bot_start(message: types.Message):
     await message.reply(text='<b>Suralar.Tanlang</b> ', reply_markup=suralar_button)
+    await request.message.delete()
 
 
 # Echo bot
