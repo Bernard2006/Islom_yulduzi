@@ -5,7 +5,7 @@ from handlers.users.API.an_nos_audio import *
 from loader import dp
 
 
-@dp.message_handler(text='An-nos surasi')
+@dp.message_handler(text='🟢An-nos surasi')
 async def tarjimon(message: types.Message):
     look = GetAnnos1()
     audio2 = getAudio1()
