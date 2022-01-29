@@ -6,7 +6,7 @@ from aiogram.dispatcher.filters.builtin import CommandStart
 from data.config import adminlar
 from keyboards.default.asosiy_button import telefonlar_button
 
-from loader import dp,db,bot
+from loader import dp,bot
 
 
 @dp.message_handler(commands='start')
