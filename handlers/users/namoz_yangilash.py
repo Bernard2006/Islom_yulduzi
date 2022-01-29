@@ -2,7 +2,6 @@ from aiogram.types import CallbackQuery
 
 from loader import dp
 from handlers.users.API.nomoz_vaqtlari import *
-from keyboards.inline.namoz_vaqt import namoz_vaqt
 from keyboards.inline.namoz_vaqt import *
 from datetime import date, time, datetime
 
