@@ -20,3 +20,4 @@ from . import poklanish
 from . import poklanish_inline
 from . import quron
 from . import viloyatlar
+from . import namoz_vaqt
