@@ -3,10 +3,10 @@ from . import suralar
 from . import start
 from . import uzbek
 from .API import nomoz_vaqtlari, fotiha_audio, fotiha_api
-from . import namoz_vaqtlaari
+from . import namoz_vaqtlaari,namoz_yangilash
 from .erkaklar_namozi import peshin
 from . import viloyat
-from . import namoz_times
+
 from . import ortga
 from . import namoz
 from . import erkaklar_namozi
