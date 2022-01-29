@@ -8,7 +8,7 @@ from handlers.users.API.ixlos_audio import *
 from loader import dp
 
 
-@dp.message_handler(text='Ixlos surasi')
+@dp.message_handler(text='🟢Ixlos surasi')
 async def tarjimon(message: types.Message):
     look = getIxlos()
     audio2 = Getaudio1()
