@@ -5,8 +5,8 @@ post_callback = CallbackData("create_post","action")
 confirmation_keyboard = InlineKeyboardMarkup(
     inline_keyboard=[
         [
-            InlineKeyboardButton(text='Yuborish',callback_data=post_callback.new(action='post')),
-            InlineKeyboardButton(text='Rad etish', callback_data=post_callback.new(action='cancel')),
+            InlineKeyboardButton(text='✅Yuborish',callback_data=post_callback.new(action='post')),
+            InlineKeyboardButton(text='❌Rad etish', callback_data=post_callback.new(action='cancel')),
 
         ]
     ]
