@@ -8,16 +8,17 @@ from loader import dp, bot
 from keyboards.inline.post_inline import confirmation_keyboard, post_callback
 
 
-@dp.message_handler(Command("yangi_post"))
+@dp.message_handler(text='✍️Izoh')
 async def create_post(message: Message):
-    await message.answer("")
+    await message.reply("<b>Fikr va takliflaringizni yozib qoldiring</b>"
+                        )
     await  Postlar.Post_qbul.set()
 
 
 @dp.message_handler(state=Postlar.Post_qbul)
 async def enter_message(message: Message, state: FSMContext):
     await state.update_data(malumot=message.text, username=message.from_user)
-    await message.answer(f"Postni tekshirihs uchun yuboraymi?",
+    await message.answer(f"Taklifingizni yuboraymi?",
                          reply_markup=confirmation_keyboard)
     await Postlar.Rad_etish.set()
 
@@ -29,7 +30,7 @@ async def confirm_post(call: CallbackQuery, state: FSMContext):
         username = data.get("username")
         await state.finish()
         await call.message.edit_reply_markup()
-        await call.message.answer("Post adminga yuborildi")
+        await call.message.answer("Izoh adminga yuborildi")
         await bot.send_message(adminlar[0], f"Foydalanuvchi {username} quyidagi postni yubormoqchi:")
         await bot.send_message(adminlar[0], text, parse_mode="HTML", reply_markup=confirmation_keyboard)
 
@@ -49,12 +50,12 @@ async def post_unknown(message: Message):
 @dp.callback_query_handler(post_callback.filter(action='post'), user_id=adminlar[0])
 async def approve_post(call: CallbackQuery):
     await call.answer("Chop etishga ruxsat berdingiz.", show_alert=True)
-    target_chanel = kanalar[0]
+    target_chanel = kanalar[1]
     message = await call.message.edit_reply_markup()
     await message.send_copy(chat_id=target_chanel)
 
 
 @dp.callback_query_handler(post_callback.filter(action='cancel'), user_id=adminlar[0])
 async def decline_post(call: CallbackQuery):
-    await call.answer("Post rad etildi", show_alert=True)
+    await call.answer("Izoh rad etildi", show_alert=True)
     await call.message.edit_reply_markup()
