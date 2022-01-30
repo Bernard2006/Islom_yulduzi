@@ -4,7 +4,7 @@ from environs import Env
 env = Env()
 env.read_env()
 
-kanalar = ['@sinov1233']
+kanalar = ['@Yulduzi_islom1','@izohlar12']
 adminlar = [1254397522]
 #.env fayl ichidan quyidagilarni o'qiymiz
 #BOT_TOKEN = env.str("BOT_TOKEN")  # Bot toekn
